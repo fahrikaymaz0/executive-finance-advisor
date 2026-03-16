@@ -263,6 +263,26 @@ section {
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
+.msg {
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 85%;
+    word-wrap: break-word;
+}
+
+.msg.ai {
+    background: var(--accent);
+    align-self: flex-start;
+}
+
+.msg.user {
+    background: var(--secondary);
+    color: #020617;
+    align-self: flex-end;
+}
+
 /* Compact Premium Footer */
 footer {
     padding: 6rem 0;
