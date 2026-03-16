@@ -1,0 +1,325 @@
+:root {
+    --primary: #0f172a;
+    --secondary: #c5a028;
+    /* Kurumsal Altın */
+    --accent: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: rgba(255, 255, 255, 0.1);
+    --gold-gradient: linear-gradient(135deg, #c5a028, #a6811a);
+    --glass: rgba(15, 23, 42, 0.8);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-main);
+    background-color: #020617;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+/* Institutional Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    background: rgba(2, 6, 23, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--secondary);
+}
+
+/* Institutional Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.2)), url('./hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.hero h1 span {
+    color: var(--secondary);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    max-width: 600px;
+}
+
+.btn-premium {
+    background: var(--gold-gradient);
+    color: #020617 !important;
+    padding: 1.2rem 3rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 30px rgba(197, 160, 40, 0.2);
+}
+
+/* Capabilities Section (Photography Focus) */
+section {
+    padding: 12rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Bento Institutional Grid */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.bento-item {
+    background: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 3rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.bento-item.with-bg {
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bento-item.with-bg .content-overlay {
+    background: rgba(2, 6, 23, 0.9);
+    padding: 2rem;
+    margin: -1rem;
+    border-top: 2px solid var(--secondary);
+}
+
+.bento-item.wide {
+    grid-column: span 2;
+}
+
+.bento-item.tall {
+    grid-row: span 2;
+}
+
+/* Expertise Visuals */
+.expertise-section {
+    background: #020617;
+    position: relative;
+}
+
+.half-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center;
+}
+
+.image-block {
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-block {
+    padding: 8rem;
+}
+
+.text-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.stat-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.stat-item h4 {
+    font-size: 3.5rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+/* AI Panel - Professional Polish */
+.ai-trigger {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: var(--primary);
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1000;
+}
+
+.ai-assistant-container {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    width: 450px;
+    height: 600px;
+    background: #0f172a;
+    border: 1px solid var(--border);
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Compact Premium Footer */
+footer {
+    padding: 6rem 0;
+    background: #020617;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.social-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--secondary);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .half-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-item.wide {
+        grid-column: span 1;
+    }
+
+    .image-block {
+        height: 400px;
+    }
+
+    .text-block {
+        padding: 4rem 2rem;
+    }
+}
